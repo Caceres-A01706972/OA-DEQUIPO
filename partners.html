@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <!-- Include Owl Carousel CSS and JavaScript -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+        <!-- FONT AWESOME CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <div class="w-full text-white" style="background-image: linear-gradient(to bottom, #01050a, #062748);">
+        <!-- MENU LARGE SCREENS -->
+        <nav class="relative px-4 py-4 mx-6 flex justify-between items-center bg-transparent">
+            <a class="text-3xl font-bold leading-none" href="#">
+                LOGO
+            </a>
+            <div>
+                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-white font-bold transition duration-200" href="#">Home</a>
+                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-white font-bold transition duration-200" href="#">Our Partners</a>
+                <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Contact</a>
+            </div>
+            <!-- HAMBURGUER -->
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-blue-600 p-3">
+                    <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    
+        <!-- MENU SMALL SCREENS -->
+        <div class="navbar-menu relative z-50 hidden">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-8">
+                    <a class="mr-auto text-3xl font-bold text-gray-900 leading-none" href="#">
+                        LOGO
+                    </a>
+                    <button class="navbar-close">
+                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <ul>
+                        <li class="mb-1">
+                            <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold transition duration-200" href="#">Home</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold transition duration-200" href="#">Our Partners</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="md:grid md:grid-cols-3">
+            <div class="md\:col-start-1">
+                <img class="hidden md:block ml-8" src="assets/globe.png">
+            </div>
+            <div class="md:col-start-2 text-center">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold pt-24 mb-4">Our Partners</h1>
+                <h1 class="text-xl md:text-2xl lg:text-3xl font-semibold mt-5 mb-10">Get to know our partners and their services!</h1>
+            </div>
+            <div class="md:col-start-3 flex justify-end items-end">
+                <img class="hidden md:block" src="assets/robotic arm.png">
+            </div>
+        </div>
+    </div>
+    
+    <!-- PARTNER CARDS -->
+    <div class="w-full px-4 mt-6">
+        <div class="mx-10 mb-4 grid md:grid-cols-2 gap-4">
+            <!-- First Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-16 justify-center" src="assets/futura-automation-logo.svg" alt="Futura Automation LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">Futura Automation</p>
+                    <p class="mt-2 text-slate-500">A premier provider of industrial robot, advanced automation, and IIOT systems for North American manufacturers, offering leading-edge solutions in manufacturing technology.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://futura-automation.com/" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=6OpVxhL5RV8" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Second Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-16 justify-center" src="assets/sensopart.svg" alt="Sensopart LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">SensoPart</p>
+                    <p class="mt-2 text-slate-500">SensoPart, a top manufacturer in factory automation, strives to pioneer innovation through research, development, and collaborations with universities. Our commitment continues as we shape the digital factory of tomorrow.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.sensopart.com/en/company/company-profile/" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=gL2EwdbkLjk" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-16 justify-center" src="assets/elite robots logo.png" alt="Elite Robors LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">Elite Robots</p>
+                    <p class="mt-2 text-slate-500">Driven by a vision to simplify the lives of businesses and individuals for an ever-better future, Elite Robots is a leading manufacturer of collaborative robots, also known as cobots.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.eliterobots.com/about-us/" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=YSBG_5XKgVA" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-16 justify-center" src="assets/phoenix contact logo.png" alt="Phoenix Contact LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">Phoenix Contact</p>
+                    <p class="mt-2 text-slate-500">Phoenix Contact has pioneered power and data solutions for automation across industries. Our innovations drive efficiency, cost reduction, and sustainability, advancing us towards a climate-neutral world.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.youtube.com/watch?v=YSBG_5XKgVA" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=6cGpysiCEB4" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-20 justify-center" src="assets/jelpc logo.png" alt="JELPC LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">JELPC</p>
+                    <p class="mt-2 text-slate-500">Ningbo Jiaerling Pneumatic Machinery is a high-tech pneumatic component manufacturer, known for innovation and global reach. We prioritize R&D, collaborating with universities, and hold numerous industry accolades.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.jelpc.com/" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=mHyVh5p817w" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-20 justify-center" src="assets/atlas copco logo.png" alt="Atlas Copco LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">Atlas Copco</p>
+                    <p class="mt-2 text-slate-500">
+                        Atlas Copco, a global leader delivering industrial productivity solutions across various sectors, including engineering, manufacturing, construction, and more. We provide comprehensive equipment, services, and support.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.atlascopco.com/es-mx" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=BxX84XwoPe0" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-16 justify-center" src="assets/nvent logo.png" alt="nvent LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">nvent Hoffman</p>
+                    <p class="mt-2 text-slate-500">nVent HOFFMAN designs and manufactures trusted systems for safeguarding electronic controls and critical electrical systems in various industries. Our extensive global network and adherence to quality standards make us a leading choice.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://hoffman.nvent.com/en-us/" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=6tClsGhviOI" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-16 justify-center" src="assets/siemens logo.png" alt="SIEMENS LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">SIEMENS</p>
+                    <p class="mt-2 text-slate-500">A tech company dedicated to industry, infrastructure, transport, and healthcare. We innovate for resource efficiency, resilient supply chains, smart buildings, clean transportation, and advanced healthcare, delivering meaningful value.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.siemens.com/global/en.html" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=xAAHgH4isFw" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-20 justify-center" src="assets/SICK logo.png" alt="SICK LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">SICK Sensor Intelligence</p>
+                    <p class="mt-2 text-slate-500">SICK leads in sensor solutions, driving industry through factory, logistics, and process automation. Our technology ensures secure, efficient control, protects individuals, and safeguards the environment across various applications.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.sick.com/us/en/" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=YG49IZXCxMw" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 flex flex-col justify-center">
+                    <!-- Display the logo and center it -->
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-1/2 h-20 justify-center" src="assets/banner logo.jpg" alt="BANNER LOGO">
+                    </div>
+                    <p class="text-lg leading-tight font-medium text-black mt-4">BANNER Engineering</p>
+                    <p class="mt-2 text-slate-500">Banner's sensors, measurement, LED lights, machine safety, and wireless tools power automation. Our award-winning products benefit Fortune 500 giants and startups, boosting efficiency, saving costs, and providing safety worldwide.</p>
+                    <!-- Add two buttons -->
+                    <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-3 ">
+                        <a href="https://www.bannerengineering.com/us/en.html" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Visit Page</a>
+                        <a href="https://www.youtube.com/watch?v=51VorwAAtRc" target="_blank" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-blue-900 text-white">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div>
+                    <img class="mx-auto" src="assets/oadequipo logo.png">
+                </div>
+                <div class="grid grid-cols-2 md:gap-6 md:grid-cols-5">
+                    <div class="items-center text-center md:col-start-2 py-8">
+                        <h2 class="mb-6 text-sm font-semibold uppercase text-white">Directory</h2>
+                        <ul class="text-white font-light space-y-3">
+                            <li>
+                                <a href="https://flowbite.com/" class="hover:underline">Home</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Our Partners</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="items-center py-8">
+                        <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact US</h2>
+                        <ul class="text-white font-light space-y-4">
+                            <li class="flex items-center space-x-2">
+                                <i class="fab fa-instagram"></i>
+                                <a href="#" class="hover:underline overflow-hidden">osfermoso@oadequipo.com</a>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fab fa-instagram"></i>
+                                <a href="#" class="hover:underline">+52 456 382 8720</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-white sm:text-center">© 2023 OADEQUIPO. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-white hover:text-gray-400">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-400">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script>
+</html>
