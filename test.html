@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Owl Carousel CSS and JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- FONT AWESOME CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+    <body>
+        <!-- WhatsApp Bubble -->
+        <div class="fixed bottom-8 right-8 z-10">
+            <a href="https://api.whatsapp.com/send?phone=1234567890" target="_blank" rel="noopener noreferrer" class="block bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 text-3xl text-center leading-16">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <div class="bg-cover w-full text-white" style="background-image: url('https://t4.ftcdn.net/jpg/03/78/75/89/360_F_378758920_fmxZwJ8TlFtfPjyB8bAZ2QEZVqJfwYrS.jpg');">
+            <!-- MENU LARGE SCREENS -->
+            <nav class="relative px-4 py-4 mx-6 flex justify-between items-center bg-transparent">
+                <a class="text-3xl font-bold leading-none" href="#">
+                    LOGO
+                </a>
+                <div>
+                    <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-white font-bold transition duration-200" href="#">Home</a>
+                    <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-white font-bold transition duration-200" href="#">Our Partners</a>
+                    <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Contact</a>
+                </div>
+                <!-- HAMBURGUER -->
+                <div class="lg:hidden">
+                    <button class="navbar-burger flex items-center text-blue-600 p-3">
+                        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Mobile menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- MENU SMALL SCREENS -->
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                    <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-bold text-gray-900 leading-none" href="#">
+                            LOGO
+                        </a>
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1">
+                                <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold transition duration-200" href="#">Home</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold transition duration-200" href="#">Our Partners</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="md:grid grid-cols-3">
+                <div class="md:col-span-2">
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold ml-10 mr-10 mt-16 mb-4">Empowering Growth: Products, Solutions, worry-free for customers & brands</h1>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 ml-10  mb-6 rounded-lg text-md">Contact</button>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="owl-carousel owl-theme bg-gray-100 text-center">
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16" src="https://www.sensopart.com/fileadmin/sensopart.com/01_logos/sensopart/sensopart_2020.svg" alt="Sensopart">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16" src="https://futura-automation.com/wp-content/uploads/2021/09/futura-automation-logo.svg" alt="Futura Automation">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8 h-16">
+                <img class="h-16 w-auto object-contain" src="assets/elite robots logo.png" alt="Elite Robots">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16 w-auto object-contain" src="assets/phoenix contact logo.png" alt="Phoenix Contact Logo">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16 w-auto object-contain" src="assets/jelpc logo.png" alt="JELPC Logo">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16 w-auto object-contain" src="assets/atlas copco logo.png" alt="Atlas Copco Logo">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16 w-auto object-contain" src="assets/nvent logo.png" alt="nvent Logo">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16 w-auto object-contain" src="assets/siemens logo.png" alt="SIEMENS Logo">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16 w-auto object-contain" src="assets/SICK logo.png" alt="SICK Logo">
+            </div>
+            <div class="item px-3 py-6 md:px-8 md:py-8">
+                <img class="h-16 w-auto object-contain" src="assets/banner logo.jpg" alt="Banner Logo">
+            </div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 mx-10 pb-10 space-x-6">
+            <div>
+                <div class="text-stone-950 mt-10 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Fabrication and Design</div>
+                <p>Our experience of more than 30 years in the design,
+                    manufacture and assembly of solutions is available to our
+                    customers. We are very honest in accepting manufacturing that
+                    we can fulfill in a timely manner and that add value.
+                    We specialize in custom solutions. 
+                </p>
+            </div>
+            <div>
+                <!-- <img class="mt-6 mx-auto md:mt-10" src="https://via.placeholder.com/400x200"> -->
+                <img class="mt-6 mx-auto md:mt-10" src="assets/fabricationdesign.png">
+            </div>
+        </div>
+
+        <div class="md:grid md:grid-cols-2 mx-10 pb-10 space-x-6">
+            <div>
+                <hr class="h-2  w-52 bg-blue-900 border-0">
+                <div class="text-stone-950 mt-5 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Distribution</div>
+                <p>
+                    Get to know our origin, excellent customer service and our wonderful partners
+                </p>
+                <hr class="h-1 w-52 mt-5 bg-blue-900 border-0">
+                <div class="grid grid-cols-3 mt-5">
+                    <div class="my-auto mx-auto">
+                        <!-- <img src="https://via.placeholder.com/100x100"> -->
+                        <img src="assets/integrity icon.png">
+                    </div>
+                    <div class="col-span-2 space-y-2">
+                        <div class="text-stone-950 text-md font-medium md:text-xl font-['Raleway']">Our Origin comes from knowledge of the industry</div>
+                        <p class="font-light">
+                            Get to know our origin, excellent customer service and our wonderful partners
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 mt-5">
+                    <div class="my-auto mx-auto">
+                        <!-- <img src="https://via.placeholder.com/100x100"> -->
+                        <img src="assets/leadership icon.png">
+                    </div>
+                    <div class="col-span-2 space-y-2">
+                        <div class="text-stone-950 text-md font-medium md:text-xl font-['Raleway']">We know the importance of customer service</div>
+                        <p class="font-light">
+                            The need to provide training and compliance with deliveries with the quality and punctuality expected from the most demanding companies in the world.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 mt-5">
+                    <div class="my-auto mx-auto">
+                        <!-- <img src="https://via.placeholder.com/100x100"> -->
+                        <img src="assets/continuous learning icon.png">
+                    </div>
+                    <div class="col-span-2 space-y-2">
+                        <div class="text-stone-950 text-md font-medium md:text-xl font-['Raleway']">Our wonderful partners</div>
+                        <p class="font-light">
+                            Our brands will have the support of quality and service at an international level.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block align-middle my-auto">
+                <!-- <img class="mx-auto" src="https://via.placeholder.com/400x300"> -->
+                <img class="mt-6 mx-auto md:mt-10 h-96 w-auto" src="assets/distribution.png">
+            </div>
+        </div>
+
+        <div class="bg-gray-100 py-10 px-10 ">
+            <div class="md:border-l-4 md:border-blue-900">
+                <hr class="h-2 w-52 mx-auto bg-blue-900 border-0">
+                <div class="text-stone-950 text-center mt-3 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Our Guiding Principles</div>
+                <div class="container mx-auto py-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 md:ml-3 gap-4">
+                        <!-- Card 1 -->
+                        <div class="md:col-span-1 bg-white rounded-lg p-4 space-y-4">
+                            <!-- Card content goes here -->
+                            <h2 class="text-2xl flex justify-center md:justify-start items-center font-semibold">
+                                <img class="mr-2" src="assets/integrity icon.png">
+                                Integrity
+                            </h2>
+                            <p class="text-center md:text-left">Upholding honesty and ethics in every action we take.</p>
+                        </div>
+                
+                        <!-- Card 2 -->
+                        <div class="md:col-span-1 bg-white rounded-lg p-4 space-y-5">
+                            <!-- Card content goes here -->
+                            <!-- Card content goes here -->
+                            <h2 class="text-2xl flex justify-center md:justify-start items-center font-semibold">
+                                <img class="mr-2" src="assets/leadership icon.png">
+                                Leadership
+                            </h2>
+                            <p class="text-center md:text-left">Exemplary Leadership: Empowering Teams at OA DEQUIPO to achieve excellence and innovate fearlessly.</p>
+                        </div>
+                
+                        <!-- Card 3 -->
+                        <div class="md:col-span-1 bg-white rounded-lg p-4 space-y-5">
+                            <!-- Card content goes here -->
+                            <!-- Card content goes here -->
+                            <h2 class="text-2xl flex justify-center md:justify-start items-center font-semibold">
+                                <img class="mr-2" src="assets/continuous learning icon.png">
+                                Continuous Learning
+                            </h2>
+                            <p class="text-center md:text-left">Fostering knowledge and developments to drive a continuous learning culture.</p>
+                        </div>
+                    </div>
+                    <div class="md:grid grid-cols-4 gap-6 space-y-4">
+                        <!-- Card 4 (Centered) -->
+                        <div class="md:col-start-2 bg-white rounded-lg mt-4 p-4 space-y-4 mx-auto">
+                            <!-- Card content goes here -->
+                            <h2 class="text-2xl flex justify-center md:justify-start items-center font-semibold">
+                                <img class="mr-2" src="assets/integrity icon.png">
+                                Customer Focus
+                            </h2>
+                            <p class="text-center md:text-left">Elevating experiences through our unwavering commitment to Customer-Centric Excellence</p>
+                        </div>
+                        <!-- Card 5 (Centered) -->
+                        <div class="col-start-3 bg-white rounded-lg p-4 space-y-4 mx-auto">
+                            <!-- Card content goes here -->
+                            <h2 class="text-2xl flex justify-center md:justify-start items-center font-semibold">
+                                <img class="mr-2" src="assets/leadership icon.png">
+                                Helping Others
+                            </h2>
+                            <p class="text-center md:text-left">Enriching lives through OA DEQUIPO’S collaborative and compassionate approach.</p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="md:grid md:grid-cols-1 mx-10 pb-10 mt-10">
+            <!-- Row 1: Horizontal line, Mision, and Mision Paragraph -->
+            <div class="mb-8">
+                <hr class="h-2 w-44 bg-blue-900 border-0">
+                <div class="text-stone-950 mt-5 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Mision</div>
+                <p class="mt-5 pb-4">We deliver products and solutions to our customers so that they do not have to worry about more than producing more and we accompany them in their growth as well as the brands we represent.</p>
+            </div>
+        
+            <!-- Row 2: Image (Centered on larger screens) -->
+            <div class="text-center items-center justify-center md:flex md:justify-center">
+                <img src="assets/mision and vision.png">
+            </div>
+        
+            <!-- Row 3: Horizontal line, Vision, and Vision Paragraph -->
+            <div class="mt-8">
+                
+                <div class="text-stone-950 mt-5 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Vision</div>
+                <p class="mt-5 pb-4">We will always be a Company that provides wellbeing to our employees, our customers, and suppliers. Our commitment will be the continuous improvement in our performance.</p>
+                <hr class="h-2 w-44 bg-blue-900 border-0">
+            </div>
+        </div>
+
+
+        
+        <footer class="bg-blue-900 text-white">
+            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                <div class="md:flex md:justify-between">
+                    <div>
+                        <img class="mx-auto" src="assets/oadequipo logo.png">
+                    </div>
+                    <div class="grid grid-cols-2 md:gap-6 md:grid-cols-5">
+                        <div class="items-center text-center md:col-start-2 py-8">
+                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Directory</h2>
+                            <ul class="text-white font-light space-y-3">
+                                <li>
+                                    <a href="https://flowbite.com/" class="hover:underline">Home</a>
+                                </li>
+                                <li>
+                                    <a href="https://tailwindcss.com/" class="hover:underline">Our Partners</a>
+                                </li>
+                                <li>
+                                    <a href="https://tailwindcss.com/" class="hover:underline">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="items-center py-8">
+                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact US</h2>
+                            <ul class="text-white font-light space-y-4">
+                                <li class="flex items-center space-x-2">
+                                    <i class="fab fa-instagram"></i>
+                                    <a href="#" class="hover:underline">osfermoso@oadequipo.com</a>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fab fa-instagram"></i>
+                                    <a href="#" class="hover:underline">+52 456 382 8720</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <span class="text-sm text-white sm:text-center">© 2023 OADEQUIPO. All Rights Reserved.
+                    </span>
+                    <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                        <a href="#" class="text-white hover:text-gray-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-400">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+	
+    <script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+
+        $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            items: 5, // Number of images to display per slide
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            dots: false,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                768: {
+                    items: 4
+                },
+                1024: {
+                    items: 5
+                }
+            }
+        });
+    });
+
+    </script>
+
+</html>
+
