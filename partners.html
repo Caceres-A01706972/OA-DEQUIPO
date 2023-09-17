@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Our Partners</title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -17,16 +17,31 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
 <body>
+    <!-- WhatsApp bubble and popup -->
+    <div class="hidden sm:block fixed bottom-4 right-10 z-50">
+        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center cursor-pointer whatsapp-bubble">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </div>
+        <div class="hidden absolute bottom-20 right-0 w-60 bg-white border border-gray-300 rounded shadow-lg whatsapp-popup">
+            <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 close-button" onclick="closePopup()">&times;</button>
+            <div class="text-center p-4 whatsapp-qr-code">
+                <!-- Add your WhatsApp QR code image here -->
+                <img class="items-center text-center justify-center" src="assets/qr-code-whatsapp.png" alt="WhatsApp QR Code">
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=4424397940</&text=Hi!%20I'm%20interested%20in%20knowing%20more%20about%20OADEQUIPO!" class="block text-center py-2 bg-green-500 text-white no-underline rounded-b whatsapp-button" target="_blank">Open WhatsApp</a>
+        </div>
+    </div>
+
     <div class="w-full text-white" style="background-image: linear-gradient(to bottom, #01050a, #062748);">
         <!-- MENU LARGE SCREENS -->
         <nav class="relative px-4 py-4 mx-6 flex justify-between items-center bg-transparent">
-            <a class="text-3xl font-bold leading-none" href="#">
-                LOGO
+            <a href="index.html">
+                <img class="w-32 h-32" src="assets/oadequipo logo.png" alt="OADEQUIPO LogO">
             </a>
             <div>
-                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-white font-bold transition duration-200" href="#">Home</a>
-                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-white font-bold transition duration-200" href="#">Our Partners</a>
-                <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Contact</a>
+                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-lg text-white font-bold hover:underline transition duration-200" href="index.html">Home</a>
+                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-lg text-white font-bold hover:underline transition duration-200" href="partners.html">Our Partners</a>
+                <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-lg text-white font-bold rounded-xl transition duration-200" href="contact.html">Contact</a>
             </div>
             <!-- HAMBURGUER -->
             <div class="lg:hidden">
@@ -44,8 +59,8 @@
             <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
-                    <a class="mr-auto text-3xl font-bold text-gray-900 leading-none" href="#">
-                        LOGO
+                    <a href="index.html">
+                        <img class="w-auto h-32" src="assets/oadequipo black logo.png" alt="OADEQUIPO Logo">
                     </a>
                     <button class="navbar-close">
                         <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,13 +71,13 @@
                 <div>
                     <ul>
                         <li class="mb-1">
-                            <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold transition duration-200" href="#">Home</a>
+                            <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold hover:underline transition duration-200" href="index.html">Home</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold transition duration-200" href="#">Our Partners</a>
+                            <a class="block p-4 py-2 px-6 text-sm text-gray-900 font-bold hover:underline transition duration-200" href="partners.html">Our Partners</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block p-4 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Contact</a>
+                            <a class="block p-4 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -73,7 +88,7 @@
                 <img class="hidden md:block ml-8" src="assets/globe.png">
             </div>
             <div class="md:col-start-2 text-center">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold pt-24 mb-4">Our Partners</h1>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold pt-12 md:pt-20 mb-4">Our Partners</h1>
                 <h1 class="text-xl md:text-2xl lg:text-3xl font-semibold mt-5 mb-10">Get to know our partners and their services!</h1>
             </div>
             <div class="md:col-start-3 flex justify-end items-end">
@@ -279,8 +294,12 @@
     </div>
 
 
-    <footer class="bg-blue-900 text-white">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <footer class="text-white" style="position: relative; background-image: url('https://www.sandiego.edu/cas/images/cognitive%20science%20banner.png'); background-size: cover; background-position: center;">
+        <!-- Dark Overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
+
+        <!-- Footer Content -->
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8" style="position: relative; z-index: 2;">
             <div class="md:flex md:justify-between">
                 <div>
                     <img class="mx-auto" src="assets/oadequipo logo.png">
@@ -290,13 +309,13 @@
                         <h2 class="mb-6 text-sm font-semibold uppercase text-white">Directory</h2>
                         <ul class="text-white font-light space-y-3">
                             <li>
-                                <a href="https://flowbite.com/" class="hover:underline">Home</a>
+                                <a href="index.html" class="hover:underline">Home</a>
                             </li>
                             <li>
-                                <a href="https://tailwindcss.com/" class="hover:underline">Our Partners</a>
+                                <a href="partners.html" class="hover:underline">Our Partners</a>
                             </li>
                             <li>
-                                <a href="https://tailwindcss.com/" class="hover:underline">Contact</a>
+                                <a href="contact.html" class="hover:underline">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -317,8 +336,7 @@
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-white sm:text-center">© 2023 OADEQUIPO. All Rights Reserved.
-                </span>
+                <span class="text-sm text-white sm:text-center">© 2023 OADEQUIPO. All Rights Reserved.</span>
                 <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                     <a href="#" class="text-white hover:text-gray-400">
                         <i class="fab fa-instagram"></i>
