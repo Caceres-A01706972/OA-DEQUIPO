@@ -21,17 +21,17 @@
     </head>
 <body>
     <!-- WhatsApp bubble and popup -->
-    <div class="hidden sm:block fixed bottom-4 right-10 z-50">
-        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center cursor-pointer whatsapp-bubble">
-            <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <div class="hidden sm:block fixed bottom-6 right-10 z-50">
+        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center transition-transform transform hover:-translate-y-2">
+            <i class="fa-brands fa-whatsapp fa-2xl text-2xl whatsapp-bubble cursor-pointer"></i>
         </div>
         <div class="hidden absolute bottom-20 right-0 w-60 bg-white border border-gray-300 rounded shadow-lg whatsapp-popup">
             <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 close-button" onclick="closePopup()">&times;</button>
             <div class="text-center p-4 whatsapp-qr-code">
                 <!-- Add your WhatsApp QR code image here -->
-                <img class="items-center text-center justify-center" src="assets/qr-code-whatsapp.png" alt="WhatsApp QR Code">
+                <img class="items-center text-center justify-center" src="assets/whatsapp-qr.png" alt="WhatsApp QR Code">
             </div>
-            <a href="https://api.whatsapp.com/send?phone=4424397940</&text=Hi!%20I'm%20interested%20in%20knowing%20more%20about%20OADEQUIPO!" class="block text-center py-2 bg-green-500 text-white no-underline rounded-b whatsapp-button" target="_blank">Open WhatsApp</a>
+            <a href="https://api.whatsapp.com/send?phone=4424397940</&text=Hi!%20I'm%20interested%20in%20knowing%20more%20about%20OADEQUIPO!" class="block text-center py-2 bg-green-500 hover:bg-green-600 text-white no-underline rounded-b whatsapp-button" target="_blank">Open WhatsApp</a>
         </div>
     </div>
 
@@ -398,5 +398,27 @@
             }
         }
     });
+    // WhatsApp bubble and popup functionality
+    const whatsappBubble = document.querySelector('.whatsapp-bubble');
+    const whatsappIcon = document.querySelector('.whatsapp-icon');
+    const whatsappPopup = document.querySelector('.whatsapp-popup');
+    
+    whatsappBubble.addEventListener('click', function () {
+        whatsappPopup.classList.remove('hidden');
+    });
+
+    whatsappIcon.addEventListener('click', function () {
+        whatsappPopup.classList.remove('hidden');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!whatsappPopup.contains(event.target) && event.target !== whatsappBubble) {
+            whatsappPopup.classList.add('hidden');
+        }
+    });
+    
+    function closePopup() {
+        whatsappPopup.classList.add('hidden');
+    }
 </script>
 </html>
