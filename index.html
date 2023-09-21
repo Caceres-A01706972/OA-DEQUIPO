@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OADEQUIPO</title>
+    <meta name="description" content="Our experience of more than 30 years in the design, manufacture and assembly of solutions is available to our customers. We are very honest in accepting manufacturing that we can fulfill in a timely manner and that add value. We specialize in custom solutions.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -20,21 +21,23 @@
     <!--Webpage Icon-->
     <link rel="shortcut icon" href="assets/oadequipo logo.png" type="image/x-icon">
 
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
+
 </head>
 
     <body>
         <!-- WhatsApp bubble and popup -->
-        <div class="hidden sm:block fixed bottom-4 right-10 z-50">
-            <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center cursor-pointer whatsapp-bubble">
-                <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <div class="hidden sm:block fixed bottom-6 right-10 z-50">
+            <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center transition-transform transform hover:-translate-y-2">
+                <i class="fa-brands fa-whatsapp fa-2xl text-2xl whatsapp-bubble cursor-pointer"></i>
             </div>
             <div class="hidden absolute bottom-20 right-0 w-60 bg-white border border-gray-300 rounded shadow-lg whatsapp-popup">
                 <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 close-button" onclick="closePopup()">&times;</button>
                 <div class="text-center p-4 whatsapp-qr-code">
                     <!-- Add your WhatsApp QR code image here -->
-                    <img class="items-center text-center justify-center" src="assets/qr-code-whatsapp.png" alt="WhatsApp QR Code">
+                    <img class="items-center text-center justify-center" src="assets/whatsapp-qr.png" alt="WhatsApp QR Code">
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=4424397940</&text=Hi!%20I'm%20interested%20in%20knowing%20more%20about%20OADEQUIPO!" class="block text-center py-2 bg-green-500 text-white no-underline rounded-b whatsapp-button" target="_blank">Open WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=4424397940</&text=Hi!%20I'm%20interested%20in%20knowing%20more%20about%20OADEQUIPO!" class="block text-center py-2 bg-green-500 hover:bg-green-600 text-white no-underline rounded-b whatsapp-button" target="_blank">Open WhatsApp</a>
             </div>
         </div>
         
@@ -92,9 +95,9 @@
             </div>
             <div class="md:grid grid-cols-3">
                 <div class="md:col-span-2">
-                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold ml-10 mr-10  md:mt-12 mb-6">Empowering Growth: Products, Solutions, worry-free for customers & brands</h1>
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold ml-10 mr-10  md:mt-12 mb-6">Unlimited Automation: Products and Solutions</h1>
                     <button class="bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-6 ml-10 mb-6 rounded-lg text-md" href="contact.html">
-                        Contact
+                        <a href="contact.html">Contact</a>
                     </button>
                 </div>
                 <div>
@@ -139,7 +142,8 @@
         <div class="md:grid md:grid-cols-2 mx-10 pb-10 space-x-6">
             <div>
                 <div class="text-stone-950 mt-10 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Fabrication and Design</div>
-                <p>Our experience of more than 30 years in the design,
+                <p class="text-justify">
+                    Our experience of more than 30 years in the design,
                     manufacture and assembly of solutions is available to our
                     customers. We are very honest in accepting manufacturing that
                     we can fulfill in a timely manner and that add value.
@@ -147,23 +151,61 @@
                 </p>
                 <br>
                 <br>
-                <p>
+                <p class="text-justify">
                     Innovation is the driving force behind our operations. With a legacy spanning over three decades, we've honed our skills in designing,
                      manufacturing, and assembling solutions that push the boundaries of what's possible. We thrive on embracing challenges and finding
                       inventive ways to tackle them.
                 </p>
             </div>
-            <div>
-                <!-- <img class="mt-6 mx-auto md:mt-10" src="https://via.placeholder.com/400x200"> -->
-                <img class="mt-6 mx-auto md:mt-10" src="assets/fabricationdesign.png">
+            <div id="indicators-carousel" class="relative w-full mt-5" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="assets/Dispositivos de soldadura.png" class="absolute top-0 left-0 w-full h-full object-contain" alt="Dispositivo de Soldadura">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="assets/LIFT ASSIST.png" class="absolute top-0 left-0 w-full h-full object-contain" alt="Lift Assist">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="assets/manipulador montaje de asientos.png" class="absolute top-0 left-0 w-full h-full object-contain" alt="Manipulador de Montaje">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full bg-gray-800 dark:bg-white text-white dark:text-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gray-800 dark:bg-white text-white dark:text-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gray-800 dark:bg-white text-white dark:text-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 left-20 z-30 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden md:flex" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 dark:bg-white text-white dark:text-gray-800 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 right-20 z-30 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden md:flex" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 dark:bg-white text-white dark:text-gray-800 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
+            
+    
         </div>
 
         <div class="md:grid md:grid-cols-2 mx-10 pb-10 space-x-6">
             <div>
                 <hr class="h-2  w-52 bg-blue-900 border-0">
                 <div class="text-stone-950 mt-5 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Distribution</div>
-                <p>
+                <p class="text-justify">
                     Get to know our origin, excellent customer service and our wonderful partners
                 </p>
                 <hr class="h-1 w-52 mt-5 bg-blue-900 border-0">
@@ -174,7 +216,7 @@
                     </div>
                     <div class="col-span-2 space-y-2">
                         <div class="text-stone-950 text-md font-medium md:text-xl font-['Raleway']">Our Origin comes from knowledge of the industry</div>
-                        <p class="font-light">
+                        <p class="font-light text-justify">
                             Get to know our origin, excellent customer service and our wonderful partners
                         </p>
                     </div>
@@ -185,8 +227,8 @@
                         <img src="assets/leadership icon.png">
                     </div>
                     <div class="col-span-2 space-y-2">
-                        <div class="text-stone-950 text-md font-medium md:text-xl font-['Raleway']">We know the importance of customer service</div>
-                        <p class="font-light">
+                        <div class="text-stone-950 text-md font-medium md:text-xl font-['Raleway'] text-justify">We know the importance of customer service</div>
+                        <p class="font-light text-justify">
                             The need to provide training and compliance with deliveries with the quality and punctuality expected from the most demanding companies in the world.
                         </p>
                     </div>
@@ -198,7 +240,7 @@
                     </div>
                     <div class="col-span-2 space-y-2">
                         <div class="text-stone-950 text-md font-medium md:text-xl font-['Raleway']">Our wonderful partners</div>
-                        <p class="font-light">
+                        <p class="font-light text-justify">
                             Our brands will have the support of quality and service at an international level.
                         </p>
                     </div>
@@ -279,7 +321,7 @@
             <div class="mb-8">
                 <hr class="h-2 w-44 bg-blue-900 border-0">
                 <div class="text-stone-950 mt-5 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Mision</div>
-                <p class="mt-5 pb-4">We deliver products and solutions to our customers so that they do not have to worry about more than producing more and we accompany them in their growth as well as the brands we represent.</p>
+                <p class="mt-5 pb-4 text-justify">We deliver products and solutions to our customers so that they do not have to worry about more than producing more and we accompany them in their growth as well as the brands we represent.</p>
             </div>
         
             <!-- Row 2: Image (Centered on larger screens) -->
@@ -291,13 +333,12 @@
             <div class="mt-8">
                 
                 <div class="text-stone-950 mt-5 pb-4 text-xl md:text-3xl font-extrabold font-['Raleway'] leading-[55px]">Vision</div>
-                <p class="mt-5 pb-4">We will always be a Company that provides wellbeing to our employees, our customers, and suppliers. Our commitment will be the continuous improvement in our performance.</p>
+                <p class="mt-5 pb-4 text-justify">We will always be a Company that provides wellbeing to our employees, our customers, and suppliers. Our commitment will be the continuous improvement in our performance.</p>
                 <hr class="h-2 w-44 bg-blue-900 border-0">
             </div>
         </div>
 
 
-        
         <footer class="text-white" style="position: relative; background-image: url('https://www.sandiego.edu/cas/images/cognitive%20science%20banner.png'); background-size: cover; background-position: center;">
             <!-- Dark Overlay -->
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
@@ -310,7 +351,7 @@
                     </div>
                     <div class="grid grid-cols-2 md:gap-6 md:grid-cols-5">
                         <div class="items-center text-center md:col-start-2 py-8">
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Directory</h2>
+                            <h2 class="mb-6 text-base font-semibold uppercase text-white">Directory</h2>
                             <ul class="text-white font-light space-y-3">
                                 <li>
                                     <a href="index.html" class="hover:underline">Home</a>
@@ -324,15 +365,16 @@
                             </ul>
                         </div>
                         <div class="items-center py-8">
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact US</h2>
+                            <h2 class="mb-6 text-base font-semibold uppercase text-white">Contact US</h2>
                             <ul class="text-white font-light space-y-4">
                                 <li class="flex items-center space-x-2">
-                                    <i class="fab fa-instagram"></i>
-                                    <a href="#" class="hover:underline overflow-hidden">osfermoso@oadequipo.com</a>
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:oscar@oadequipo.com" class="hover:underline hidden sm:block">oscar@oadequipo.com</a>
+                                    <a href="mailto:oscar@oadequipo.com" class="hover:underline sm:hidden">oscar@oadequipo. com</a>
                                 </li>
                                 <li class="flex items-center space-x-2">
-                                    <i class="fab fa-instagram"></i>
-                                    <a href="#" class="hover:underline">+52 456 382 8720</a>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:+524424397940" class="hover:underline">+52 442 439 7940</a>
                                 </li>
                             </ul>
                         </div>
@@ -342,19 +384,22 @@
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <span class="text-sm text-white sm:text-center">© 2023 OADEQUIPO. All Rights Reserved.</span>
                     <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                        <a href="#" class="text-white hover:text-gray-400">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/oadequipo/#" class="text-white hover:text-gray-400">
+                            <i class="fa-brands fa-instagram fa-xl md:fa-2xl"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-gray-400">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://www.linkedin.com/in/oa-dequipo-sa-de-cv-010a84286/" class="text-white hover:text-gray-400">
+                            <i class="fa-brands fa-linkedin fa-xl md:fa-2xl"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-gray-400">
-                            <i class="fab fa-facebook"></i>
+                        <a href="https://api.whatsapp.com/send?phone=4424397940</&text=Hi!%20I'm%20interested%20in%20knowing%20more%20about%20OADEQUIPO!" class="text-white hover:text-gray-400">
+                            <i class="fa-brands fa-whatsapp fa-xl md:fa-2xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </footer>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     </body>
 	
     <script>
@@ -426,9 +471,14 @@
 
     // WhatsApp bubble and popup functionality
     const whatsappBubble = document.querySelector('.whatsapp-bubble');
+    const whatsappIcon = document.querySelector('.whatsapp-icon');
     const whatsappPopup = document.querySelector('.whatsapp-popup');
     
     whatsappBubble.addEventListener('click', function () {
+        whatsappPopup.classList.remove('hidden');
+    });
+
+    whatsappIcon.addEventListener('click', function () {
         whatsappPopup.classList.remove('hidden');
     });
 
@@ -441,6 +491,34 @@
     function closePopup() {
         whatsappPopup.classList.add('hidden');
     }
+
+
+    // JavaScript to enable swipe navigation
+    const carousel = document.getElementById("indicators-carousel");
+    let touchStartX = 0;
+
+    carousel.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchend", (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+
+        if (deltaX > 50) {
+            // Swipe right, navigate to previous slide
+            const prevButton = document.querySelector("[data-carousel-prev]");
+            if (prevButton) {
+                prevButton.click();
+            }
+        } else if (deltaX < -50) {
+            // Swipe left, navigate to next slide
+            const nextButton = document.querySelector("[data-carousel-next]");
+            if (nextButton) {
+                nextButton.click();
+            }
+        }
+    });
 
     </script>
 
